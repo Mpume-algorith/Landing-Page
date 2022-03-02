@@ -17,10 +17,13 @@
     --clr-black: #000000;
     --clr-accent: #a80808;
 
+
     --fs-h1: 2.5rem;
     --fs-h2: 2.125rem;
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
+
+    --box-shadow: 0.25em 0.25em 0.75em rgba(0,0,0.25), 0.125em 0.125em 0.25em rgba(0,0,0,.15);
 }
 
 @media (min-width: 800px){
@@ -43,10 +46,15 @@ body {
 }
 img{
     display: block;
-    max-width: 100%;
+    max-width: 270px;
+
 
 }
 /*TYPOGRAPHY*/
+
+section{
+    padding: 5em 2em;
+}
 
 h1,
 h2,
@@ -65,12 +73,69 @@ h3{font-size: var(--fs-h3);}
 .section__title--intro{
 
 }
-.section__subtitle{
+.section__subtitle {
     margin: 0;
     font-size: var(--fs-h3);
 }
-.section__subtitle-intro,
-.section__subtitle-about{
+.section__subtitle--intro-2,
+.section__subtitle--about {
     background: var(--clr-accent);
     font-family: var(--ff-secondary);
+    font-weight: var(--fw-reg);
+    margin-bottom: 1rem;
 }
+/*INTRO SECTION*/
+.intro{
+    position: relative;
+    
+     
+}
+.intro_image{
+    box-shadow: var(--box-shadow);
+}
+@media (min-width: 600px){
+    .intro {
+        display: grid;
+        min-width: min-content;
+        margin: 0 auto;
+        column-gap: 1em;
+        grid-template-areas:
+            "title img"
+            "subtitle img"
+            "download-btn img";
+        grid-template-columns: min-content max-content;
+
+    }
+    .intro_image{
+        grid-area: img; 
+        position: relative;
+    }
+    .section__subtitle--intro-2{
+        grid-area: subtitle;
+        align-self: start;
+        grid-column: -1/1;
+        position: relative;
+        right: -1.5em;
+        width: calc(100% + 1.5em);
+        left: 0;
+        padding: .25em;
+        margin-top: 2rem;
+    }
+    .section__title--intro{
+        grid-area: title;
+        min-width: 20rem;
+        line-height: 1.6;
+    }
+    .download_link{
+        grid-area: download-btn;
+        grid-row: 3;
+        text-align: center
+    }
+    .section__title--intro{
+        grid-area: title;
+        margin-top: 1rem;
+    }
+
+}
+
+
