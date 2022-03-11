@@ -82,6 +82,7 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Images\About Me.jpg" />
+    <Content Include="Images\Car Repars.jpg" />
     <Content Include="Images\Code with notes.jpg" />
     <Content Include="Images\Code.jpg" />
     <Content Include="Images\Coding Desk 2.jpg" />

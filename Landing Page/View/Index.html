@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAklSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
     <link rel="stylesheet" href="../Style/styles.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" />
+    <!--Open Props css library link -->
+    <link rel="stylesheet" href="https://unpkg.com/open-props" />
 </head>
 <body>
     <header class="header">
@@ -15,7 +17,7 @@
             <span class="hamburger"></span>
         </button>
         <nav class="nav">
-            <ul class="nav__list">
+            <ul class="nav__list"> 
                 <li class="nav__item"><a href="#home">Home</a></li>
                 <li class="nav__item"><a href="#about-me">About Me</a></li>
                 <li class="nav__item"><a href="#my-projects">Projects</a></li>
@@ -31,104 +33,159 @@
         <a class="download_link" href="../Downloadables/Mpumelelo Tsotsha_CV.pdf" download="Mpumelelo Tsotsha CV"> &lt;Download CV&gt;</a>
     </section>
     <!--ABOUT-->
-    <section class="about about__full-length" id="about-me">
-        <h1 class="section__title section__title-about">About Me</h1> 
-        <p class="section__subtitle section__subtitle--about">FULL STACK DEV</p>
-        <div class="about-me__body">
-            <p class="paragraph">
+    <section class="about__full-length" id="about-me">
+        <div class="about">
+            <h1 class="section__title section__title-about">About Me</h1> 
+            <p class="section__subtitle section__subtitle--about">FULL STACK DEV</p>
+            <div class="about-me__body">
+                <p class="paragraph">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                 fringilla quam in felis tempor rutrum. Morbi pharetra quis libero non bibendum. 
                 Praesent consectetur justo magna, eget luctus leo porttitor eget. 
                 Proin vitae vestibulum orci, at commodo ipsum. In vel orci magna. 
                 Ut ullamcorper et justo in fermentum. Aenean quis urna sit amet est efficitur pellentesque. 
                 Duis sed arcu blandit, vulputate odio ac, ultrices velit.
-            </p> 
-            <p class="paragraph">
+                </p> 
+                <p class="paragraph">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 fringilla quam in felis tempor rutrum. Morbi pharetra quis libero non bibendum.
                 Praesent consectetur justo magna, eget luctus leo porttitor eget.
                 Proin vitae vestibulum orci, at commodo ipsum. In vel orci magna.
                 Ut ullamcorper et justo in fermentum. Aenean quis urna sit amet est efficitur pellentesque.
                 Duis sed arcu blandit, vulputate odio ac, ultrices velit.
-            </p>
-            <p class="paragraph">
+                </p>
+                <p class="paragraph">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 fringilla quam in felis tempor rutrum. Morbi pharetra quis libero non bibendum.
                 Praesent consectetur justo magna, eget luctus leo porttitor eget.
                 Proin vitae vestibulum orci, at commodo ipsum. In vel orci magna.
                 Ut ullamcorper et justo in fermentum. Aenean quis urna sit amet est efficitur pellentesque.
                 Duis sed arcu blandit, vulputate odio ac, ultrices velit.
-            </p>
+                </p>
+            </div>
+            <img class="about-me_image" src="../Images/About Me.jpg" alt="Picture of Mpumelelo Hicking" />
         </div>
-        <img class="about-me_image" src="../Images/About Me.jpg" alt="Picture of Mpumelelo Hicking" />
 
     </section>
     <!--PROJECTS-->
-    <section class="projects" id="my-projects">
+     <section class="projects" id="my-projects">
         <h1 class="section__title section__title-projects">Projects</h1>
         <!--PORTFOLIO SHOWCASE-->
         <!--Green Gecko-->
-        <div class="portfolio">
-            <h3 class="project_heading">The Green Gecko Frames</h3>
-            <a href="#" class="portfolio_item"><img class="porfolio_image" src="../Images/Green Gecko Frames.jpg" alt="Green Gecko Frames Logo" /></a>
-            <p class="portfolio_description">
-                <strong>Problem:<br /></strong>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                fringilla quam in felis tempor rutrum. Morbi pharetra quis libero non bibendum.
-                Praesent consectetur justo magna, eget luctus leo porttitor eget.
-                Proin vitae vestibulum orci, at commodo ipsum. In vel orci magna.
-                Ut ullamcorper et justo in fermentum. Aenean quis urna sit amet est efficitur pellentesque.
-                Duis sed arcu blandit, vulputate odio ac, ultrices velit.<br />
-                <strong>Solution:<br /></strong>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                fringilla quam in felis tempor rutrum. Morbi pharetra quis libero non bibendum.
-                Praesent consectetur justo magna, eget luctus leo porttitor eget.
-                Proin vitae vestibulum orci, at commodo ipsum. In vel orci magna.
-                Ut ullamcorper et justo in fermentum. Aenean quis urna sit amet est efficitur pellentesque.
-                Duis sed arcu blandit, vulputate odio ac, ultrices velit.
-            </p>
-        </div>
-        <!--Traffic Ticketing System-->
-        <div class="portfolio">
-            <h3 class="project_heading">Traffic Ticketing System</h3>
-            <a href="#" class="portfolio_item"><img class="porfolio_image" src="../Images/Traffic System Logo(1).jpg" alt="Traffic System Logo" /></a>
-            <p class="portfolio_description">
-                <strong>Problem:<br /></strong>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                fringilla quam in felis tempor rutrum. Morbi pharetra quis libero non bibendum.
-                Praesent consectetur justo magna, eget luctus leo porttitor eget.
-                Proin vitae vestibulum orci, at commodo ipsum. In vel orci magna.
-                Ut ullamcorper et justo in fermentum. Aenean quis urna sit amet est efficitur pellentesque.
-                Duis sed arcu blandit, vulputate odio ac, ultrices velit.<br />
-                <strong>Solution:<br /></strong>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                fringilla quam in felis tempor rutrum. Morbi pharetra quis libero non bibendum.
-                Praesent consectetur justo magna, eget luctus leo porttitor eget.
-                Proin vitae vestibulum orci, at commodo ipsum. In vel orci magna.
-                Ut ullamcorper et justo in fermentum. Aenean quis urna sit amet est efficitur pellentesque.
-                Duis sed arcu blandit, vulputate odio ac, ultrices velit.
-            </p>
-        </div>
-        <!--The College Investor-->
-        <div class="portfolio">
-            <h3 class="project_heading">The College Investor</h3>
-            <a href="#" class="portfolio_item"><img class="porfolio_image" src="../Images/The College Investor.jpg" alt="College Investor Logo" /></a>
-            <p class="portfolio_description">
-                <strong>Problem:<br /></strong>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                fringilla quam in felis tempor rutrum. Morbi pharetra quis libero non bibendum.
-                Praesent consectetur justo magna, eget luctus leo porttitor eget.
-                Proin vitae vestibulum orci, at commodo ipsum. In vel orci magna.
-                Ut ullamcorper et justo in fermentum. Aenean quis urna sit amet est efficitur pellentesque.
-                Duis sed arcu blandit, vulputate odio ac, ultrices velit.<br />
-                <strong>Solution:<br /></strong>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                fringilla quam in felis tempor rutrum. Morbi pharetra quis libero non bibendum.
-                Praesent consectetur justo magna, eget luctus leo porttitor eget.
-                Proin vitae vestibulum orci, at commodo ipsum. In vel orci magna.
-                Ut ullamcorper et justo in fermentum. Aenean quis urna sit amet est efficitur pellentesque.
-                Duis sed arcu blandit, vulputate odio ac, ultrices velit.
-            </p>
+        <div class="portfolio snaps-inline">
+            <div class="portfolio_element">
+                <h3 class="project_heading">The Green Gecko Frames</h3>
+                <a href="#" class="portfolio_item"><img class="porfolio_image" src="../Images/Green Gecko Frames.jpg" alt="Green Gecko Frames Logo" /></a>
+                <p class="portfolio_description">
+                    <strong>Problem:<br /></strong>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    fringilla quam in felis tempor rutrum. Morbi pharetra quis libero non bibendum.
+                    Praesent consectetur justo magna, eget luctus leo porttitor eget.
+                    <br />
+                    <strong>Solution:<br /></strong>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    fringilla quam in felis tempor rutrum. Morbi pharetra quis libero non bibendum.
+                    Praesent consectetur justo magna, eget luctus leo porttitor eget.
+
+                </p>
+            </div>
+            <!--Traffic Ticketing System-->
+            <div class="portfolio_element">
+                <h3 class="project_heading">Traffic Ticketing System</h3>
+                <a href="#" class="portfolio_item"><img class="porfolio_image_3" src="../Images/Traffic System Logo(1).jpg" alt="Traffic System Logo" /></a>
+                <p class="portfolio_description">
+                    <strong>Problem:<br /></strong>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    fringilla quam in felis tempor rutrum. Morbi pharetra quis libero non bibendum.
+                    Praesent consectetur justo magna, eget luctus leo porttitor eget.
+                    <br />
+                    <strong>Solution:<br /></strong>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    fringilla quam in felis tempor rutrum. Morbi pharetra quis libero non bibendum.
+
+                </p>
+            </div>
+            <!--The College Investor-->
+            <div class="portfolio_element">
+                <h3 class="project_heading">The College Investor</h3>
+                <a href="#" class="portfolio_item"><img class="porfolio_image" src="../Images/The College Investor.jpg" alt="College Investor Logo" /></a>
+                <p class="portfolio_description">
+                    <strong>Problem:<br /></strong>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    fringilla quam in felis tempor rutrum. Morbi pharetra quis libero non bibendum.
+                    Praesent consectetur justo magna, eget luctus leo porttitor eget.
+                    <br />
+                    <strong>Solution:<br /></strong>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    fringilla quam in felis tempor rutrum. Morbi pharetra quis libero non bibendum.
+                    Praesent consectetur justo magna, eget luctus leo porttitor eget.
+
+                </p>
+            </div>
+            <!--THE WORKSHOP-->
+            <div class="portfolio_element">
+                <h3 class="project_heading">The Workshop</h3>
+                <a href="#" class="portfolio_item"><img class="porfolio_image" src="../Images/Car Repars.jpg" alt="The Workshop Logo" /></a>
+                <p class="portfolio_description">
+                    <strong>Problem:<br /></strong>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    fringilla quam in felis tempor rutrum. Morbi pharetra quis libero non bibendum.
+                    Praesent consectetur justo magna, eget luctus leo porttitor eget.
+                    <br />
+                    <strong>Solution:<br /></strong>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    fringilla quam in felis tempor rutrum. Morbi pharetra quis libero non bibendum.
+                    Praesent consectetur
+                </p>
+            </div>
+            <!--THE WORKSHOP-->
+            <div class="portfolio_element">
+                <h3 class="project_heading">Something 1</h3>
+                <a href="#" class="portfolio_item"><img class="porfolio_image" src="../Images/Coding Desk.jpg" alt="The Workshop" /></a>
+                <p class="portfolio_description">
+                    <strong>Problem:<br /></strong>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    fringilla quam in felis tempor rutrum. Morbi pharetra quis libero non bibendum.
+                    Praesent consectetur justo magna, eget luctus leo porttitor eget.
+                    <br />
+                    <strong>Solution:<br /></strong>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    fringilla quam in felis tempor rutrum. Morbi pharetra quis libero non bibendum.
+                    Praesent consectetur
+                </p>
+            </div>
+            <!--THE WORKSHOP-->
+            <div class="portfolio_element">
+                <h3 class="project_heading">Something 2</h3>
+                <a href="#" class="portfolio_item"><img class="porfolio_image" src="../Images/Developer impostor syndrome.jpg" alt="The Workshop Lo" /></a>
+                <p class="portfolio_description">
+                    <strong>Problem:<br /></strong>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    fringilla quam in felis tempor rutrum. Morbi pharetra quis libero non bibendum.
+                    Praesent consectetur justo magna, eget luctus leo porttitor eget.
+                    <br />
+                    <strong>Solution:<br /></strong>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    fringilla quam in felis tempor rutrum. Morbi pharetra quis libero non bibendum.
+                    Praesent consectetur
+                </p>
+            </div>
+            <!--THE WORKSHOP-->
+            <div class="portfolio_element">
+                <h3 class="project_heading">Something 3</h3>
+                <a href="#" class="portfolio_item"><img class="porfolio_image" src="../Images/Code.jpg" alt="The Code" /></a>
+                <p class="portfolio_description">
+                    <strong>Problem:<br /></strong>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    fringilla quam in felis tempor rutrum. Morbi pharetra quis libero non bibendum.
+                    Praesent consectetur justo magna, eget luctus leo porttitor eget.
+                    <br />
+                    <strong>Solution:<br /></strong>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    fringilla quam in felis tempor rutrum. Morbi pharetra quis libero non bibendum.
+                    Praesent consectetur
+                </p>
+            </div>
         </div>
     </section>
     <footer>
