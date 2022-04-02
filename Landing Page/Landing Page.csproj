@@ -98,6 +98,7 @@
     <Content Include="Images\The College Investor.jpg" />
     <Content Include="Images\Traffic System Logo%281%29.jpg" />
     <Content Include="Images\Web Design.jpg" />
+    <Content Include="Scripts\Index.js" />
     <Content Include="Style\styles.css" />
     <Content Include="View\Index.html" />
     <Content Include="Web.config" />

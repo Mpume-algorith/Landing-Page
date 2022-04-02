@@ -38,6 +38,11 @@
 }
 
 /*GENERAL STYLES*/
+
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     background: var(--clr-light);
     color: var(--clr-dark);
@@ -49,8 +54,6 @@ body {
 img{
     display: block;
     max-width: 100%;
-
-
 }
 /*TYPOGRAPHY*/
 
@@ -104,17 +107,20 @@ header{
 
 .nav{
     position: fixed;
-    background-color: var(--clr-dark);
+    background-color: var(--clr-black);
     color:   var(--clr-light);
     top: 0;
-    bottom: 0;
-    left: 0;
     right: 0;
+    bottom: 0;
     z-index: 100;
+    min-width: 25rem;
+
 
     transform: translateX(100%);
     transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
 }
+
+
 .nav__list{
     list-style: none;
     display: flex;
@@ -144,6 +150,27 @@ header{
     right: 1em;
     top: 1em;
     z-index: 1000;
+}
+  
+.nav-open .nav{
+    transform: translateX(0);
+}
+
+.nav-open .nav-toggle{
+    position: fixed;
+}
+
+.nav-open .hamburger{
+    transform: rotate(.625turn);
+}
+
+.nav-open .hamburger::before{
+    transform: rotate(90deg);
+    background: var(--clr-accent);
+}
+
+.nav-open .hamburger::after{
+    opacity: 0;
 }
 /*Hamburger Toggle*/
 .hamburger{
@@ -185,8 +212,6 @@ header{
 /*INTRO SECTION*/
 .intro{
     position: relative;
-    
-     
 }
 .intro_image{
     box-shadow: var(--box-shadow);
