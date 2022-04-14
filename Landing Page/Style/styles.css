@@ -224,6 +224,49 @@ header{
 .intro_image{
     box-shadow: var(--box-shadow);
 }
+
+.download_link{
+    display: inline-block;
+    margin: auto;
+    background-color: var(--clr-accent);
+    color: var(--clr-dark);
+    padding: 1rem 4rem;
+    border-radius: 1rem;
+    font-size: var(--fs-h3);
+    text-decoration: none;
+    font-weight: var(--fw-reg);
+    font-family: var(--ff-secondary);
+    font-weight: var(--fw-bold);
+    transition: all .5s;
+}
+.download_link span{
+    display: inline-block;
+    position: relative;
+    transition: .5s;
+}
+
+.download_link span::after {
+    content: "\f019";
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font: var(--fa-font-solid);
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: .5s;
+    margin-left: 20px;
+
+}
+
+.download_link:hover span{
+    padding-right: 25px;
+}
+
+.download_link:hover span::after{
+    opacity: 1;
+    right: 0;
+}
 @media (min-width: 600px){
     .intro {
         display: grid;
@@ -381,7 +424,8 @@ a
     opacity: .7;
 }
 .footer__link:hover{
-    text-decoration: underline;
+    text-decoration: none;
+    opacity: .7
 }
 
 .social-list{
