@@ -1,5 +1,4 @@
 ﻿
-
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelectorAll('.nav__link')
 const clickClose = document.querySelector('section')

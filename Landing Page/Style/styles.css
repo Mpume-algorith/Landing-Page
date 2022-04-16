@@ -60,6 +60,7 @@ img{
 
 section{
     padding: 5em 2em;
+    outline: #ff6a00 dotted 3px;
 }
 
 h1,
@@ -223,6 +224,7 @@ header{
 }
 .intro_image{
     box-shadow: var(--box-shadow);
+    margin-bottom: 1rem;
 }
 
 .download_link{
@@ -242,7 +244,7 @@ header{
 .download_link span{
     display: inline-block;
     position: relative;
-    transition: .5s;
+    transition: .5s; 
 }
 
 .download_link span::after {
@@ -267,10 +269,14 @@ header{
     opacity: 1;
     right: 0;
 }
+.download_link:hover{
+    opacity: .9;
+}
+
 @media (min-width: 600px){
-    .intro {
+    .intro{
         display: grid;
-        max-width: 1000px;
+        max-width: 62.5rem;
         margin: 0 auto;
         column-gap: 1em;
         grid-template-areas:
@@ -278,13 +284,14 @@ header{
             "subtitle img"
             "download-btn img";
         grid-template-columns: min-content max-content;
-
+        padding-right: 0;
     }
     .intro_image{
         grid-area: img; 
         position: relative;
+        outline: #ff6a00 dotted 3px;
     }
-    .section__subtitle--intro-2{
+    .section__subtitle--intro-2 {
         grid-area: subtitle;
         align-self: start;
         grid-column: -1/1;
@@ -294,20 +301,30 @@ header{
         left: 0;
         padding: .25em;
         margin-top: 2rem;
+        outline: #ff6a00 dotted 3px;
     }
-    .section__title--intro{
+    .section__title--intro {
+        position: relative;
+        left: 3rem;
         grid-area: title;
-        min-width: 20rem;
+        min-width: 33rem;
         line-height: 1.6;
+        outline: #ff6a00 dotted 3px;
+        font-weight: 700;
+    }
+    .section__title--intro span{
+        position: relative;
+        left: 3rem;
     }
     .download_link{
         grid-area: download-btn;
         grid-row: 3;
         text-align: center
     }
-    .section__title--intro{
+    .section__title--intro {
         grid-area: title;
         margin-top: 1rem;
+        outline: #ff6a00 dotted 3px;
     }
 }
 /* ABOUT MYSELF */
@@ -321,7 +338,7 @@ header{
 
 .about {
     position: relative;
-    max-width: 1000px;
+    max-width: 62.5rem;
     margin: 0 auto;
 }
 
@@ -443,5 +460,3 @@ a
 .social-list__link{
     padding: .5em;
 }
-
-
