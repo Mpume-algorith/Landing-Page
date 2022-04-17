@@ -281,15 +281,20 @@ header{
         column-gap: 1em;
         grid-template-areas:
             "title img"
+            "role-list img"
             "subtitle img"
             "download-btn img";
         grid-template-columns: min-content max-content;
         padding-right: 0;
     }
     .intro_image{
+        border-radius: 3px;
         grid-area: img; 
         position: relative;
         outline: #ff6a00 dotted 3px;
+    }
+    .roleList{
+        grid-area: role-list;
     }
     .section__subtitle--intro-2 {
         grid-area: subtitle;
@@ -312,14 +317,63 @@ header{
         outline: #ff6a00 dotted 3px;
         font-weight: 700;
     }
-    .section__title--intro span{
+
+    .roleList {
+        outline: #ff6a00 dotted 3px;
         position: relative;
-        left: 3rem;
+        left: 4rem;
+        height: 1.5rem;
+        line-height: 1.5rem;
+        overflow: hidden;
     }
+    .roleList li{
+        position: relative;
+        top: 0;
+        list-style: none;
+        font-size: var(--fs-h3);
+        font-weight: var(--fw-bold);
+        color: var(--clr-accent);
+        animation: slide 20s steps(4) infinite;
+    }
+    @keyframes slide
+    {
+        100%
+        {
+            top: -6rem;
+        }
+    }
+    .roleList li span{
+        position: relative;
+    }
+    .roleList li span::before{
+        content: "";
+        position: absolute;
+        left: 0%;
+        width: 120%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent 0%, var(--clr-light) 5%, var(--clr-light) 100%);
+        animation: animate 5s linear forwards infinite;
+    }
+    @keyframes animate
+    {
+        0%
+        {
+            left: -20%;
+        }
+        50%
+        {
+            left: 120%
+        }
+        100%
+        {
+            left: -20%
+        }
+    }
+
     .download_link{
         grid-area: download-btn;
-        grid-row: 3;
-        text-align: center
+        grid-row: 4;
+        text-align: center;
     }
     .section__title--intro {
         grid-area: title;
@@ -366,6 +420,7 @@ header{
         grid-area: img;
         margin-top: 2rem;
         box-shadow: var(--box-shadow);
+        border-radius: 3px;
     }
 }
 /* PROJECTS */
