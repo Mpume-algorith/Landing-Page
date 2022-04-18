@@ -291,7 +291,6 @@ header{
         border-radius: 3px;
         grid-area: img; 
         position: relative;
-        outline: #ff6a00 dotted 3px;
     }
     .roleList{
         grid-area: role-list;
@@ -306,40 +305,42 @@ header{
         left: 0;
         padding: .25em;
         margin-top: 2rem;
-        outline: #ff6a00 dotted 3px;
     }
     .section__title--intro {
+        top: 2rem;
         position: relative;
-        left: 3rem;
+        left: 1rem;
+        font-size: var(--fs-h2);
         grid-area: title;
         min-width: 33rem;
         line-height: 1.6;
-        outline: #ff6a00 dotted 3px;
         font-weight: 700;
+        text-align: center;
     }
 
     .roleList {
-        outline: #ff6a00 dotted 3px;
         position: relative;
-        left: 4rem;
-        height: 1.5rem;
-        line-height: 1.5rem;
+        left: 0;
+        height: 1.8rem;
+        line-height: 1.8rem;
         overflow: hidden;
+        text-align: center;
     }
     .roleList li{
         position: relative;
         top: 0;
         list-style: none;
-        font-size: var(--fs-h3);
+        font-size: 1.8rem;
         font-weight: var(--fw-bold);
         color: var(--clr-accent);
         animation: slide 20s steps(4) infinite;
     }
+    
     @keyframes slide
     {
         100%
         {
-            top: -6rem;
+            top: -7.2rem;
         }
     }
     .roleList li span{
@@ -378,7 +379,6 @@ header{
     .section__title--intro {
         grid-area: title;
         margin-top: 1rem;
-        outline: #ff6a00 dotted 3px;
     }
 }
 /* ABOUT MYSELF */
