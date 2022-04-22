@@ -178,7 +178,7 @@ header{
 }
 
 .nav-open section {
-    filter: blur(2px);
+    filter: blur(3px);
 }
 
 /*Hamburger Toggle*/
@@ -210,11 +210,11 @@ header{
 
 .hamburger::before{
     transform: translateY(-10px);
-    background: var(--clr-dark);
+    background: var(--clr-accent);
 }
 .hamburger::after{
     transform: translateY(10px);
-    background: var(--clr-dark);
+    background: var(--clr-accent);
 }
 
 
@@ -382,47 +382,92 @@ header{
     }
 }
 /* ABOUT MYSELF */
-.about__full-length{
+/*.about__full-length{
     background-color: var(--clr-dark);
     background-image: url('../Images/Code with notes.jpg');
     background-size: cover;
     color: var(--clr-light);
     background-blend-mode: multiply;
-}
+}*/
 
-.about {
+.about__me {
     position: relative;
     max-width: 62.5rem;
     margin: 0 auto;
 }
 
 @media (min-width: 600px){
-    .about{
+    .about__me{
         display: grid;
         grid-template-areas:
-            "title img"
-            "subtitle img"
-            "paragraphs img";
-        grid-template-columns: 1fr 200px;
+            "about-title stack-title"
+            "about-me tech-stack";
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
     }
-    
-    .section__title-about{
-        grid-area: title;
+    .about__heading {
+        grid-area: about-title;
+        outline: var(--clr-accent) dotted 3px;
+        text-align: center;
     }
-    .section__subtitle--about{
-        grid-area: subtitle;
-        margin-bottom: .25em;
-        padding: .25em;
+    .tech__stack-title {
+        grid-area: stack-title;
+        outline: var(--clr-accent) dotted 3px;
+        text-align: center;
+    }
+    .about__preview{
+        grid-area: about-me;
+        outline: var(--clr-accent) dotted 3px;
+        padding-right: 3rem;
+        padding-left: 3rem;
+        text-align: center;
+    }
+    .about__button{
+        display: block;
+        margin: auto;
     }
 
-    .about-me_image{
-        position: relative;
-        grid-area: img;
-        margin-top: 2rem;
-        box-shadow: var(--box-shadow);
-        border-radius: 3px;
     }
-}
+    .tech__stack {
+        grid-area: tech-stack;
+        outline: var(--clr-accent) dotted 3px;
+    }
+    .icon-list{
+        list-style: none;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+
+    }
+    .icon__item {
+        position: relative;
+        font-size: 2.25rem;
+        margin: auto;
+        
+    }
+    .icon__item > p{
+        position: relative;
+        font-size: 1rem;
+        top: -1rem;
+        text-align: center;
+    }
+    .javascript-tag{
+        position: relative;
+        left: 1rem;
+    }
+    .dot__net-tag{
+        position: relative;
+        left: .5rem;
+    }
+    .html-tag{
+        position: relative;
+        left: .25rem;
+    }
+    .python-tag{
+        position: relative;
+        left: .25rem;
+    }
+     
 /* PROJECTS */
 .projects{
     margin: 0 auto;
