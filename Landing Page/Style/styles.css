@@ -193,7 +193,7 @@ header{
 .hamburger::after{
     background: var(--clr-accent);
     width: 2em;
-    height: 3px;
+    height: .188em;
     border-radius: 1em;
 
     transition: transform 250ms ease-in-out;
@@ -425,6 +425,7 @@ header{
     .about__button{
         display: block;
         margin: auto;
+        cursor: pointer;
     }
 
     }
@@ -467,7 +468,96 @@ header{
         position: relative;
         left: .25rem;
     }
-     
+/*MODAL POPUP*/
+@media (min-width: 600px){
+    .modal-container{
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        pointer-events: none;
+
+    } 
+    .show .modal-container{
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .modal{
+        border-radius: .5rem;
+        aspect-ratio: 16/9;
+        width: 40rem;
+        background: #fff;
+    }
+    .modal-grid {
+        aspect-ratio: 16/9;
+        width: 40rem;
+        overflow-y: scroll;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .modal-header{
+        background: var(--clr-light);
+        border-radius: .5rem;
+
+    }
+    .modal-title{
+        text-align: center;
+    }
+    .modal-grid > img{
+        aspect-ratio: 1/1;
+        width: 12.5rem;
+        position: fixed;
+        margin-left: 25rem;
+        margin-top: 2rem;
+    }
+    .modal-paragraph {
+        text-align: center;
+        margin-left: 2rem;
+        margin-bottom: 2rem;
+
+    }
+    .exit-button {
+        padding: .5em;
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+        position: relative;
+        display: block;
+        margin-left: 36rem;
+        bottom: 2.125rem;
+        z-index: 1000;
+    }
+    .exit-icon {
+        display: block;
+        position: relative;
+        transform: rotate(.625turn);
+    }
+    .exit-icon,
+    .exit-icon:before{
+        background: var(--clr-dark);
+        width: 2em;
+        height: .188em;
+        border-radius: 1em;
+        
+    }
+    .exit-icon:before{
+        content: "";
+        background: var(--clr-dark);
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: rotate(90deg);
+    }
+
+    
+}
 /* PROJECTS */
 .projects{
     margin: 0 auto;
