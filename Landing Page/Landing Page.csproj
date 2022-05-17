@@ -101,6 +101,7 @@
     <Content Include="Scripts\Index.js" />
     <Content Include="Style\styles.css" />
     <Content Include="View\Index.html" />
+    <Content Include="View\SuccessPage.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
