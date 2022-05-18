@@ -12,9 +12,7 @@ const formExit = document.querySelector('.form-exit-button');
 
 
 
-function alertMsg() {
-    alert("Successful!");
-}
+
 
 formOpen.addEventListener('click', () => {
     document.body.classList.add('show-form');
@@ -46,3 +44,39 @@ navLinks.forEach(link => {
 clickClose.addEventListener('click', () => {
     document.body.classList.remove('nav-open');
 })
+
+//Preventing Fomrsubmit redirection after submit form
+var form = document.querySelector(".my-form");
+
+async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.querySelector(".status");
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            status.classList.add('success');
+            status.innerHTML = "Thanks for your submission!";
+            form.reset()
+        } else {
+            response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                    status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                } else {
+                    status.classList.add('error');
+                    status.innerHTML = "Oops! There was a problem"
+                }
+            })
+        }
+    }).catch(error => {
+        status.classList.add('error');
+        status.innerHTML = "Oops! There was a problem"
+    });
+}
+form.addEventListener("submit", handleSubmit)
+
