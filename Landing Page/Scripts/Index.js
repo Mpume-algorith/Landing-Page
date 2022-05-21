@@ -9,8 +9,7 @@ const linkClose = document.querySelector('.project-link');
 const formOpen = document.querySelector('.form-popup');
 const formOpenSpace = document.querySelector('.form-container');
 const formExit = document.querySelector('.form-exit-button');
-
-
+const formSubmit = document.querySelector('.submit-button');
 
 
 
@@ -28,6 +27,9 @@ window.onclick = function (event) {
     }
     if (event.target == formOpenSpace || event.target == formExit) {
         document.body.classList.remove('show-form');
+    }
+    if (event.target == formSubmit) {
+        document.body.classList.add('form-shut');
     }
 }
 
@@ -49,7 +51,7 @@ clickClose.addEventListener('click', () => {
 var form = document.querySelector(".my-form");
 
 async function handleSubmit(event) {
-    event.preventDefault();
+    event.preventDefault();   
     var status = document.querySelector(".status");
     var data = new FormData(event.target);
     fetch(event.target.action, {
@@ -60,7 +62,7 @@ async function handleSubmit(event) {
         }
     }).then(response => {
         if (response.ok) {
-            status.classList.add('success');
+            document.body.classList.add('success');
             status.innerHTML = "Thanks for your submission!";
             form.reset()
         } else {
@@ -68,15 +70,23 @@ async function handleSubmit(event) {
                 if (Object.hasOwn(data, 'errors')) {
                     status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
                 } else {
-                    status.classList.add('error');
+                    document.body.classList.add('error');
                     status.innerHTML = "Oops! There was a problem"
                 }
             })
         }
     }).catch(error => {
-        status.classList.add('error');
+        document.body.classList.add('error');
         status.innerHTML = "Oops! There was a problem"
     });
 }
 form.addEventListener("submit", handleSubmit)
+
+//Setting the timer for form, after form submission
+
+/*function formShut() {
+    document.body.classList.add('form-shut');
+}
+
+window.onsubmit = formShut();*/
 
