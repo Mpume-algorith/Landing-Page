@@ -10,6 +10,7 @@ const formOpen = document.querySelector('.form-popup');
 const formOpenSpace = document.querySelector('.form-container');
 const formExit = document.querySelector('.form-exit-button');
 const formSubmit = document.querySelector('.submit-button');
+const readMore = document.querySelector(".expand-btn");
 
 
 
@@ -82,11 +83,6 @@ async function handleSubmit(event) {
 }
 form.addEventListener("submit", handleSubmit)
 
-//Setting the timer for form, after form submission
+//READ MORE portfolio description button feature
 
-/*function formShut() {
-    document.body.classList.add('form-shut');
-}
-
-window.onsubmit = formShut();*/
 

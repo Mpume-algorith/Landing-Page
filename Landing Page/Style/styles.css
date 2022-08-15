@@ -225,7 +225,6 @@ header {
 }
 .intro {
     position: relative;
-    outline: var(--clr-yellow-accent) dotted 3px;
     margin: 0;
 }
 .intro_image{
@@ -294,13 +293,11 @@ header {
             "img download-btn";
         grid-template-columns: 1fr 1fr;
         padding-right: 0;
-        outline: var(--clr-yellow-accent) dotted 3px;
     }
     .intro_image{
         grid-area: img;
         border-radius: 3px; 
         position: relative;
-        outline: var(--clr-yellow-accent) dotted 3px;
     }
     .roleList {
         grid-area: role-list;       
@@ -379,7 +376,6 @@ header {
         grid-area: download-btn;
         margin-top: 0;
         text-align: center;
-        outline: var(--clr-yellow-accent) dotted 3px;
     }
     .section__title--intro {
         grid-area: title;
@@ -737,6 +733,10 @@ form {
     margin: 0 auto;
     background: var(--clr-dominant);
 }
+.projects-full{
+    background: var(--clr-dominant);
+}
+
 @media (min-width: 600px){
     .portfolio {
         background-color: var(--clr-dominant);
@@ -744,11 +744,8 @@ form {
         color: var(--clr-light);
         display: grid;
         grid-template-areas:
-            "main-project project-2"
-            "main-project project-3"
-            "main-project project-4";
+            "main-project submain-project";
         grid-template-columns: 40% 60%;
-        grid-template-rows: repeat(3, [row] auto);
     }
 
     .project_heading {
@@ -758,8 +755,8 @@ form {
 
     .portfolio_element {
         padding: 1rem;
-        background: var(--clr-lighter-blue);
-        color: var(--clr-yellow-accent);
+        background: var(--clr-dark-yellow);
+        color: var(--clr-dominant);
         border-radius: .5rem;
         margin: .5rem;
         min-width: 0;
@@ -768,12 +765,21 @@ form {
 
     .portfolio_element-main {
         grid-area: main-project;
-        grid-row: 1 / 3;
+        grid-row: 1;
+    }
+
+    .portfolio_element-submain{
+        background: var(--clr-dominant);
+        grid-area: submain-project;
+        padding: 0 0;
+        grid-row: 1;
+        display: grid;
+       
     }
 
     .portfolio_element-2 {
-        grid-gap: 1rem;
-        grid-area: project-2;
+        grid-gap: .5rem;
+        grid-area: project-1;
         grid-row: 1;
         display: grid;
         grid-template-columns: 30% 70%;
@@ -783,8 +789,8 @@ form {
     }
 
     .portfolio_element-3 {
-        grid-gap: 1rem;
-        grid-area: project-3;
+        grid-gap: .5rem;
+        grid-area: project-2;
         grid-row: 2;
         display: grid;
         grid-template-columns: 30% 70%;
@@ -794,8 +800,8 @@ form {
     }
 
     .portfolio_element-4 {
-        grid-gap: 1rem;
-        grid-area: project-4;
+        grid-gap: .5rem;
+        grid-area: project-3;
         grid-row: 3;
         display: grid;
         grid-template-columns: 30% 70%;
@@ -814,11 +820,11 @@ form {
 
     .portfolio_element a {
         display: inline-block;
-        min-height: 10rem;
+        min-height: 5rem;
     }
 
     .portfolio_element a img {
-        min-height: 10rem;
+        min-height: 5rem;
         height: 100%;
         width: 100%;
         aspect-ratio: 1 / 1;
@@ -827,16 +833,25 @@ form {
     .portfolio_element-2 a img,
     .portfolio_element-3 a img,
     .portfolio_element-4 a img{
-        min-height: max-content;
+        min-height: fit-content;
         height: 100%;
-        aspect-ratio: 1 / 2;
+        aspect-ratio: 1 / 1;
     }
 
+    .expand-btn {
+        display: block;
+        /*margin: auto;*/
+        cursor: pointer;
+    }
+
+    .hide{
+        display: none;
+    }
     .portfolio_element:hover {
-        background-color: var(--clr-surface);
+        /*background-color: var(--clr-surface);
         color: var(--clr-light);
         transform: scale(1.03);
-        transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;*/
     }
 
 }
